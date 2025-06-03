@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  color: #c0bfbf;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/imagend\ fondo\ inicio.png'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar, .principal {
+  background-color: #000 !important;
+}
+
+.navbar-brand h2 {
+  color: #8fff00;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.menu-animado:hover {
+  color: #8fff00 !important;
+  text-shadow: 0 0 15px #8fff00;
+}
+
+.btn-project {
+  background-color: #8fff00;
+  color: black;
+  font-weight: bold;
+}
+
+.main-text {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.highlight {
+  color: #8fff00;
+}
+
+.sub-text {
+  font-size: 1rem;
+  text-align: center;
+  color: #aaa;
+}
+
+#logo-jotu {
+  transition: filter 0.3s ease;
+}
+
+.panel {
+  background-color: #0e0e0e;
+  color: white;
+  margin: 60px auto;
+  border-radius: 18px;
+  padding: 80px 40px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.panel:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(140, 255, 0, 0.5);
+}
+
+.panel h2 {
+  color: #8fff00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.panel p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#inicio {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#inicio > div {
+  position: relative;
+  z-index: 2;
+}
+
+.product-card { background-size: cover;
+  background-position: center;
+  padding: 10px;
+  border-radius: 10px;  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .main-text {
+    font-size: 4.5rem;
+  }
+}
+
+.seccion-estilo {
+  position: relative;
+  background-image: url("../img/tu-imagen.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.seccion-estilo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); 
+  z-index: 1;
+}
+
+.seccion-estilo > .container,
+.seccion-estilo > div {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.portafolio-seccion {
+  background-image: url('img/fondo-textura.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 100px 0;
+}
+
+.portafolio-seccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.portafolio-seccion > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-vertical {
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.sombra-flayer {
+  max-width: 55%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.texto-sobre {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+
+@keyframes parpadeoBlanco {
+  0%, 100% { filter: brightness(1); }
+  25%, 75% { filter: brightness(4); } /* Se pone blanco */
+  50% { filter: brightness(2); }
+}
+
+.logo-blanco-intermitente {
+  animation: parpadeoBlanco 1s ease-in-out;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); /* lo hace blanco sobre verde */
+}
+
+/* ==== Animación de entrada repetida (solo cuando visible) ==== */
+.animated-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0.3;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estado inicial */
+.slide-in-text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Activado cuando entra en vista */
+.slide-in-text.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SOBRE - Estilo coherente con inicio y portafolio */
+.sobre-seccion {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('../img/fondo-textura.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+/* Título vertical (imagen PNG) */
+.titulo-vertical {
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Imagen del artista con sombra */
+.sombra-artista {
+  max-width: 45%; /* Controla el tamaño */
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); /* Sombra en verde neón transparente */
+}
+
+/* Texto del artista */
+.texto-sobre {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev {
+    left: -10px !important;
+  }
+  .carousel-control-next {
+    right: -10px !important;
+  }
+}
+
+.collapse {
+  transition: height 0.4s ease;
+}
+
+
